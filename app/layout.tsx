@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     url: 'https://www.oceanaxisline.com',
     siteName: 'OceanAxis',
   },
+  // 👇 Paste your verification code here
+  verification: {
+    google: '<meta name="google-site-verification" content="_D6j2CJSjYmak52Veta8bkmxMO4yU3edbbZhNXiaSSw" />',
+  },
 }
 
 const schemaMarkup = {
