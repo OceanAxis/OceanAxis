@@ -20,7 +20,7 @@ export default function Header() {
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <nav className="max-w-7xl mx-auto px-6 py-4">
+      <nav className="max-w-7xl mx-auto px-6 py-4"  aria-label="OceanAxis main navigation">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
