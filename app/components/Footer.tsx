@@ -1,7 +1,14 @@
 import { Mail, Phone, MapPin } from 'lucide-react'
+import Link from 'next/link'
 
 const footerLinks = {
-  Services: ['Ocean Freight', 'Air Freight', 'Road Transport', 'Warehousing', 'Custom Clearance'],
+  Services: [
+    { label: 'Ocean Freight', href: '/services/ocean-freight' },
+    { label: 'Air Freight', href: '/services/air-freight' },
+    { label: 'Road Transport', href: '/services/road-transport' },
+    { label: 'Warehousing', href: '/services/warehousing' },
+    { label: 'Custom Clearance', href: '#services' },
+  ],
   Company: ['About Us', 'Careers', 'Press', 'Blog', 'Partners'],
   Support: ['Help Center', 'Track Shipment', 'File a Claim', 'API Docs', 'Contact'],
 }
@@ -69,7 +76,6 @@ export default function Footer() {
               International shipping company connecting businesses to global markets with ocean freight, air freight, and land transport across Middle East & Asia since 2008.
             </p>
 
-            {/* NAP — Critical for Local SEO */}
             <address className="not-italic space-y-3">
               {[
                 { icon: Mail, text: 'info@oceanaxisline.com', href: 'mailto:info@oceanaxisline.com' },
@@ -90,36 +96,36 @@ export default function Footer() {
 
           <div className="lg:col-span-3">
             <div className="grid grid-cols-2 gap-8 lg:grid-cols-3">
+
               <nav aria-label="Shipping services">
                 <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">Services</h4>
                 <ul className="space-y-2 sm:space-y-3">
-                  {footerLinks.Services.map((link) => (
-                    <li key={link}>
-                      <a href="#services" className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{link}</a>
+                  {footerLinks.Services.map((service) => (
+                    <li key={service.label}>
+                      <Link href={service.href} className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{service.label}</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
+
               <nav aria-label="Company links">
                 <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">Company</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   {footerLinks.Company.map((link) => (
-                    <li key={link}>
-                      <a href="#about" className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{link}</a>
-                    </li>
+                    <li key={link}><a href="#about" className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{link}</a></li>
                   ))}
                 </ul>
               </nav>
+
               <nav aria-label="Support links">
                 <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">Support</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   {footerLinks.Support.map((link) => (
-                    <li key={link}>
-                      <a href="#contact" className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{link}</a>
-                    </li>
+                    <li key={link}><a href="#contact" className="text-navy-400 hover:text-white transition-colors duration-200 text-sm">{link}</a></li>
                   ))}
                 </ul>
               </nav>
+
               <div className="lg:hidden">
                 <h4 className="text-white font-semibold mb-4 text-sm">Follow Us</h4>
                 <SocialIcons direction="col" />

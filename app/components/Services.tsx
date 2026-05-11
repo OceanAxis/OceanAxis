@@ -1,4 +1,5 @@
 import { Truck, Plane, Ship, Package } from 'lucide-react'
+import Link from 'next/link'
 
 const services = [
   {
@@ -6,30 +7,38 @@ const services = [
     title: 'Ocean Freight',
     description: 'Full container load (FCL) and less than container load (LCL) sea freight services across Middle East and Asia. 500+ shipping routes worldwide.',
     stats: '500+ Routes',
-    keywords: 'ocean freight Middle East Asia'
+    href: '/services/ocean-freight',
   },
   {
     icon: Plane,
     title: 'Air Freight',
     description: 'Express air cargo solutions for time-sensitive shipments between Asia, Middle East, and beyond. Door-to-door delivery in 24–48 hours.',
     stats: '24-48 Hours',
-    keywords: 'air freight Asia Middle East'
+    href: '/services/air-freight',
   },
   {
     icon: Truck,
     title: 'Land & Road Transport',
     description: 'Reliable door-to-door land freight and road transport services across Pakistan, UAE, and neighboring countries.',
     stats: 'Nationwide',
-    keywords: 'land freight road transport Pakistan UAE'
+    href: '/services/road-transport',
   },
   {
     icon: Package,
     title: 'Warehousing',
     description: 'Secure cargo storage facilities with real-time inventory tracking. Strategic warehouse locations across the Middle East.',
     stats: '1M+ sq ft',
-    keywords: 'warehousing Middle East cargo storage'
-  }
+    href: '/services/warehousing',
+  },
 ]
+
+interface Service {
+  icon: React.ElementType
+  title: string
+  description: string
+  stats: string
+  href: string
+}
 
 export default function Services() {
   return (
@@ -49,11 +58,12 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
-          {services.map((service, idx) => (
-            <article
+          {services.map((service: Service, idx: number) => (
+            <Link
               key={idx}
-              aria-label={service.title}
-              className="group hover:shadow-2xl hover:-translate-y-2 sm:hover:-translate-y-4 transition-all duration-500 bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-navy-100 hover:border-navy-200"
+              href={service.href}
+              aria-label={`Learn more about ${service.title}`}
+              className="group hover:shadow-2xl hover:-translate-y-2 sm:hover:-translate-y-4 transition-all duration-500 bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-navy-100 hover:border-navy-200 block"
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-navy-500 to-navy-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <service.icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" aria-hidden="true" />
@@ -66,9 +76,9 @@ export default function Services() {
               </p>
               <div className="flex items-center text-navy-500 font-semibold">
                 <span className="text-lg sm:text-xl lg:text-2xl">{service.stats}</span>
-                <span className="ml-2" aria-hidden="true">→</span>
+                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block" aria-hidden="true">→</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
