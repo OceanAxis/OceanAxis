@@ -32,7 +32,7 @@ export default function Header() {
               ))}
             </ul>
 
-            <a href="#contact" className="btn-primary hidden md:block">Get Quote</a>
+            <a href="/quote" className="btn-primary hidden md:block">Get Quote</a>
 
             <button className="md:hidden p-2 text-navy-800" onClick={() => setMobileMenuOpen(true)} aria-label="Open menu">
               <Menu size={26} />
@@ -67,7 +67,7 @@ export default function Header() {
         </ul>
 
         <div className="px-6">
-          <a href="#contact" className="btn-primary block text-center w-full" onClick={() => setMobileMenuOpen(false)}>Get Quote</a>
+          <a href="/quote" className="btn-primary block text-center w-full" onClick={() => setMobileMenuOpen(false)}>Get Quote</a>
         </div>
       </div>
     </>
