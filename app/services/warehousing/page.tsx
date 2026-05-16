@@ -104,7 +104,7 @@ export default function WarehousingPage() {
             </p>
            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
   <a href="/quote" className="bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-8 py-3.5 rounded-lg transition shadow-lg text-center">Get Storage Quote</a>
-  <a href="/contact" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-3.5 rounded-lg transition text-center">Tour a Facility</a>
+  <a href="mailto:info@oceanaxisline.com" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-3.5 rounded-lg transition text-center">Tour a Facility</a>
 </div>
           </div>
 

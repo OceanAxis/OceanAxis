@@ -1,5 +1,4 @@
 
-
 interface StatItem {
   value: string;
   label: string;
@@ -101,7 +100,7 @@ export default function AirFreightPage() {
               <a href="/quote" className="bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg">
                 Get a Quote
               </a>
-              <a href="/contact" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200">
+              <a href="mailto:info@oceanaxisline.com?subject=Air%20Freight%20Enquiry" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200">
                 Talk to an Expert
               </a>
             </div>
@@ -206,7 +205,7 @@ export default function AirFreightPage() {
         <p className="text-[#8a9abf] mb-8 text-lg max-w-xl mx-auto">
           Get a personalised air freight quote in under 2 minutes.
         </p>
-        <a href="/qoute" className="inline-block bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-10 py-4 rounded-lg transition shadow-lg text-lg">
+        <a href="/quote" className="inline-block bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-10 py-4 rounded-lg transition shadow-lg text-lg">
           Request a Quote →
         </a>
       </section>

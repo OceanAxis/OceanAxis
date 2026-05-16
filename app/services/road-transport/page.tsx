@@ -102,7 +102,7 @@ export default function RoadTransportPage() {
               <a href="/quote" className="bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg">
                 Get a Quote
               </a>
-              <a href="/contact" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition">
+              <a href="mailto:info@oceanaxisline.com" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition">
                 View Fleet
               </a>
             </div>

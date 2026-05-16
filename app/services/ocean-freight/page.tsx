@@ -95,7 +95,7 @@ export default function OceanFreightPage() {
             <a href="/quote" className="bg-[#2e6be6] hover:bg-[#1e5bd6] text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg">
               Get a Quote
             </a>
-            <a href="/contact" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition">
+            <a href="mailto:info@oceanaxisline.com?subject=Ocean%20Freight%20Enquiry" className="border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition">
               Speak to a Specialist
             </a>
           </div>
